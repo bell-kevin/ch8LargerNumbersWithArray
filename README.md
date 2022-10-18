@@ -6,11 +6,11 @@ Create a class for generating random numbers (hint: see the projects in Module 4
 
 Here is an example of the results:
 
-![Ch 8 Proj1](https://github.com/bell-kevin/ch8LargerNumbersWithArray/blob/main/arrayCorrect.PNG)
+![Ch 8 Proj1](https://github.com/bell-kevin/ch8LargerNumbersWithArray/blob/main/arrayRandomNumbersCorrect.PNG)
 
 Here is an example with errors in the input:
 
-![Ch 8 Proj1 errors](https://github.com/bell-kevin/ch8LargerNumbersWithArray/blob/main/arrayInputValidation.PNG)
+![Ch 8 Proj1 errors](https://github.com/bell-kevin/ch8LargerNumbersWithArray/blob/main/arrayRandomNumbersInputValidation.PNG)
 
 Take screenshots similar to those seen here, one with no errors in input, one with errors in input.
 
