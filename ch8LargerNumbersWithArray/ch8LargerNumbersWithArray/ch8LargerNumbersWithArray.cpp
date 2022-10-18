@@ -2,6 +2,12 @@
 //
 
 #include <iostream>
+//random number function
+#include <cstdlib>
+//time function
+#include <ctime>
+// prototypes
+
 
 int main()
 {
@@ -9,18 +15,26 @@ int main()
 	std::cout << "The program contains an array holding 25 integers between 1 and 100.\n";
 	std::cout << "The array contains:\n\n";
 	int arraySize = 25;
-	//the two dimensional array
-	int numbers[5][5] = { { 48, 39, 84, 44, 66 },
-	{ 36, 14, 99, 25, 69 },
-	{ 84, 4, 67, 22, 29 },
-	{ 87, 98, 52, 32, 59 },
-	{ 56, 59, 19, 89, 59 } };
-	// display array numbers
-	for (int row = 0; row < 5; row++)
+	// seed the random number generator
+	unsigned seed;
+	seed = time(0);
+	srand(seed);
+	//the two dimensional array filled with random numbers
+	double array[5][5];
+	// store the random numbers in the array
+	for (int i = 0; i < 5; i++)
 	{
-		for (int column = 0; column < 5; column++)
+		for (int j = 0; j < 5; j++)
 		{
-			std::cout << numbers[row][column] << " ";
+			array[i][j] = rand() % 100 + 1;
+		} // end for j
+	} // end for i
+	// display array numbers
+	for (int i = 0; i < 5; i++)
+	{
+		for (int j = 0; j < 5; j++)
+		{
+			std::cout << array[i][j] << " ";
 		} // end inner for
 		std::cout << std::endl;
 	} // end outer for
@@ -34,11 +48,11 @@ int main()
 		std::cin >> value;
 	} // end while
 	int count = 0;
-	for (int row = 0; row < 5; row++)
+	for (int i = 0; i < 5; i++)
 	{
-		for (int column = 0; column < 5; column++)
+		for (int j = 0; j < 5; j++)
 		{
-			if (numbers[row][column] > value)
+			if (array[i][j] > value)
 			{
 				count++;
 			} // end if
